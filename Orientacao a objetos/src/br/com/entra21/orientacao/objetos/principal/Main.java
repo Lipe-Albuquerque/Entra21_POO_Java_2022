@@ -47,19 +47,10 @@ public class Main {
 
 	public static void aprenderClassesObjetos() {
 		Funcionario funcionario1 = new Funcionario();
-		Funcionario funcionario2 = new Funcionario("Filipe", (byte) 20, "Estagiario", 1180.5f);
-		funcionario1.setAge((byte) 20);
-		funcionario1.setName("Filipe");
-		funcionario1.setCargoAtual("DevOp");
-		funcionario1.setSalario(3500f);
+		
 
-		Diretor diretor1 = new Diretor();
-		diretor1.realizarApresentacao();
-		Diretor diretor2 = new Diretor();
-		diretor2.realizarApresentacao();
-		Diretor diretor3 = new Diretor("Filipe", (byte) 20, (byte)0, null);
-		diretor3.realizarApresentacao();
-		Professor professorJava = new Professor();
+
+
 
 		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
 
@@ -79,7 +70,7 @@ public class Main {
 		Aluno alunoNovato = new Aluno();
 
 		Aluno alunoObjeto;
-		professorJava.setNome("oliota");
+
 		alunoObjeto = new Aluno();
 
 		alunoObjeto.idade = 18;
