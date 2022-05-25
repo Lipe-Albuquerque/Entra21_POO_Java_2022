@@ -3,36 +3,30 @@ package br.com.entra21.orientacao.objetos.principal;
 import java.util.Scanner;
 
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
+import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
 import br.com.entra21.orientacao.objetos.principal.classes.Aluno;
 import br.com.entra21.orientacao.objetos.principal.classes.Professor;
 
 public class Main {
-	
-	
-	
-	
-	
 
 	// o objeto da classe Scanner esta na variavel de entrada, então é um obj
 	// porem o System.in é uma chamada static pq
 	// para acessar o in do System nao precisei dar new
 	static Scanner input = new Scanner(System.in);
 
-
 	public static void main(String[] args) {
-	
+
 		byte option;
 		do {
 			System.out.println(" Escolha uma opção");
 			System.out.println("0- Sair ");
 			System.out.println("1- Classes");
 			System.out.println("2- Herança");
-			
+
 			option = input.nextByte();
 
-			
-			switch(option) {
-			
+			switch (option) {
+
 			case 0:
 				System.out.println("Saindo...");
 				break;
@@ -42,24 +36,28 @@ public class Main {
 			case 2:
 				aprendendoHeranca();
 				break;
-				default:
-					break;
-			
+			default:
+				break;
+
 			}
-			
-			
-		}while(option!=0);
-		
-		
+
+		} while (option != 0);
+
 	}
 
 	public static void aprenderClassesObjetos() {
+		Funcionario funcionario1 = new Funcionario();
+		Funcionario funcionario2 = new Funcionario("Filipe", (byte) 20, "Estagiario", 1180.5f);
+		funcionario1.setAge((byte) 20);
+		funcionario1.setName("Filipe");
+		funcionario1.setCargoAtual("DevOp");
+		funcionario1.setSalario(3500f);
 
 		Diretor diretor1 = new Diretor();
 		diretor1.realizarApresentacao();
 		Diretor diretor2 = new Diretor();
 		diretor2.realizarApresentacao();
-		Diretor diretor3 = new Diretor("Filipe",(byte) 20);
+		Diretor diretor3 = new Diretor("Filipe", (byte) 20, (byte)0, null);
 		diretor3.realizarApresentacao();
 		Professor professorJava = new Professor();
 
@@ -107,8 +105,9 @@ public class Main {
 		 */
 
 	}
+
 	public static void aprendendoHeranca() {
-		
+
 	}
 
 }
