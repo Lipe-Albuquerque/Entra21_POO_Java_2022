@@ -2,10 +2,13 @@ package br.com.entra21.orientacao.objetos.principal;
 
 import java.util.Scanner;
 
+import br.com.entra21.orientacao.objetos.principal.aula01.classes.Aluno;
+import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
-import br.com.entra21.orientacao.objetos.principal.classes.Aluno;
-import br.com.entra21.orientacao.objetos.principal.classes.Professor;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
+import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
 
 public class Main {
 
@@ -47,10 +50,6 @@ public class Main {
 
 	public static void aprenderClassesObjetos() {
 		Funcionario funcionario1 = new Funcionario();
-		
-
-
-
 
 		Professor professoraIngles = new Professor("Isabelle", (byte) 30);
 
@@ -98,6 +97,56 @@ public class Main {
 	}
 
 	public static void aprendendoHeranca() {
+
+	}
+
+	public static void learningPolimorfismo() {
+		Atleta messi = new Atleta();
+		messi.comemorarWin();
+		messi.learnigWithLoss();
+
+		Nadador cleidomar = new Nadador("Cleidomar", (byte) 38, 15, 14, "mar", "sunga");
+		cleidomar.comemorarWin();
+		cleidomar.learnigWithLoss();
+		cleidomar.setName("Cleidomar Rovson");
+	}
+
+	public static void aprenderClassesPolimorfismo() {
+
+		// padrão de polimorfismo para comportamentos(métodos) é herdar.
+
+		// segunda forma do polimorfismo é fazer completamente os
+		// comportamentos(métodos) do meu jeito.
+
+		// terceira forma do polimorfismo é aproveitar a minha herança e fazer um
+		// diferencial.
+
+		Atleta cr7 = new Atleta();
+
+		cr7.setName("Cristiano Ronaldo");
+		cr7.comemorarWin();
+
+		System.out.println("----------------------------");
+
+		Nadador michaelPhelps = new Nadador();
+
+		michaelPhelps.setName("Michael Phelps");
+
+		Nadador sergioMichael = new Nadador("Sérgio Michael", (byte) 39, 23, 40, "Piscína", "Sunga e Touca");
+
+		sergioMichael.comemorarWin(); // procura primeiro na minha classe Nadador, se não tiver busca na herança.
+
+		michaelPhelps.comemorarWin();
+
+		System.out.println("----------------------------");
+
+		Velocista usainBolt = new Velocista();
+
+		usainBolt.setName("Usain Bolt");
+
+		usainBolt.comemorarWin();
+
+		System.out.println("----------------------------");
 
 	}
 
