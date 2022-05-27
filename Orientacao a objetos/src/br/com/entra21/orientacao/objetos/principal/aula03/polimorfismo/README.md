@@ -1,16 +1,14 @@
-# Aprendendo polimorfismo
-## Polimorfismo significa varias formas
-> Varias formas de executar o comportamento herdado
+# Learning polymorphism
+## Polymorphism means multiple shapes
+> Various ways to perform legacy behavior
 
-> - É necessario henraça para fazer as 3 formas basicas de polimorfismo
+> - Inheritance is required to make the 3 basic forms of polymorphism
 
-> 1. Apenas aproveitar os comportamentos herdados
-> 1. Fazer completamente minha maneira escrevendo um método identico da herança
-> 1. Sobrescrever @Override o método herdado
-	- Essa forma obriga o meu método sobrescrito ter a mesma sintax da herança
-	- Posso aproveitar o comportamento herdado com "super" e fazer um diferencial
-	- Posso não aproveitar nada e fazer do meu jeito
-
-
+> 1. Only leverage inherited behaviors
+> 1. Completely make it my way by writing an identical inheritance method
+> 1. Override @Override the inherited method
+- This form forces my overridden method to have the same syntax as the inheritance
+- Can I leverage inherited behavior with "super" and make a difference
+- I can enjoy nothing and do it my way
 
 

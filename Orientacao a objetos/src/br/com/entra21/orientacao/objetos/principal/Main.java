@@ -6,9 +6,16 @@ import br.com.entra21.orientacao.objetos.principal.aula01.classes.Aluno;
 import br.com.entra21.orientacao.objetos.principal.aula01.classes.Professor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Diretor;
 import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Funcionario;
+import br.com.entra21.orientacao.objetos.principal.aula02.heranca.Pessoa;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Atleta;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Nadador;
 import br.com.entra21.orientacao.objetos.principal.aula03.polimorfismo.Velocista;
+import br.com.entra21.orientacao.objetos.principal.aula04.conceitos.poo.Ponto;
+import br.com.entra21.orientacao.objetos.principal.aula04.conceitos.poo.Reta;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Capivara;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Gato;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Godzilla;
+import br.com.entra21.orientacao.objetos.principal.aula04.interfaces.Humano;
 
 public class Main {
 
@@ -25,7 +32,9 @@ public class Main {
 			System.out.println("0- Sair ");
 			System.out.println("1- Classes");
 			System.out.println("2- Herança");
-
+			System.out.println("3- Polimorfismo");
+			System.out.println("4- Conceitos POO");
+			System.out.println("5- Polimorfismo com interface");
 			option = input.nextByte();
 
 			switch (option) {
@@ -39,7 +48,17 @@ public class Main {
 			case 2:
 				aprendendoHeranca();
 				break;
+			case 3:
+				aprenderClassesPolimorfismo();
+				break;
+			case 4:
+				aprenderConceitosPOO();
+				break;
+			case 5:
+				aprenderPolimorfismoInterface();
+				break;
 			default:
+				System.out.println("Escolha uma opção valida");
 				break;
 
 			}
@@ -148,6 +167,85 @@ public class Main {
 
 		System.out.println("----------------------------");
 
+	}
+
+	private static void aprenderConceitosPOO() {
+		//A classe ponto tem alta COESÃO pos é preciso nas suas responsabilidades
+		Ponto pontoAlto = new Ponto(30,10000);
+		Ponto esquerdaBaixo = new Ponto(-50,-500);
+		
+		//A classe reta é AGREGADA por pontos que podem não estar inicializados.
+		//A asociação de reta e ponto e de um para muitos respectivamente
+		Reta torta = new Reta();
+		Reta retaDiagonal = new Reta(pontoAlto,esquerdaBaixo);
+		
+		
+		
+	}
+
+	private static void aprenderPolimorfismoInterface() {
+
+		 Humano rafael = new Humano();
+	        rafael.setNome("Rafael");
+
+	        rafael.apresentarSe();
+
+	        rafael.alimentar("pizza");
+
+	        rafael.locomover();
+	        rafael.comunicar("HEY\n");
+
+	        Gato vezu = new Gato("vezu", new Pessoa("Rubem", (byte)33, ""));
+
+	        vezu.alimentar("racao");
+	        vezu.comunicar("quero racao");
+	        vezu.locomover();
+	        
+	        Capivara robson = new Capivara();
+	        robson.alimentar("Água");
+	        robson.comunicar("");
+	        robson.locomover();
+	        
+	        Godzilla jorgim = new Godzilla("jorgim", "raiozinho");
+	        jorgim.alimentar("farofa");
+	        System.out.println(jorgim.getNameMonster()+" lança um "+jorgim.getPoder());
+	        System.out.println();
+	      
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+		
 	}
 
 }
